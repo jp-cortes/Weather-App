@@ -6,6 +6,8 @@ import { Loading } from "./Loading";
 
 //api url
 const APP_URL = process.env.REACT_APP_URL;
+const APP_KEY = process.env.REACT_APP_KEY;
+const APP_URL_HOST = process.env.REACT_APP_URL_HOST;
 
 function WeatherApp() {
   const [weather, setWeather] = useState(null);
@@ -14,8 +16,8 @@ function WeatherApp() {
       const request = await fetch(`${APP_URL}/${city}`, {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key": process.env.REACT_APP_KEY,
-          "X-RapidAPI-Host": process.env.REACT_APP_URL_HOST,
+          "X-RapidAPI-Key": APP_KEY,
+          "X-RapidAPI-Host": APP_URL_HOST,
         },
       });
       const json = await request.json();
