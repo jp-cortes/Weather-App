@@ -1,7 +1,7 @@
 # e-commerce-site
 Weather-App
 Weather app built with ReactJS. <br/>
-Api Information got from (AerisWeather)[https://rapidapi.com/aerisweather-aerisweather/api/aerisweather1/]<br/>
+Api Information got from [AerisWeather](https://rapidapi.com/aerisweather-aerisweather/api/aerisweather1/)<br/>
 
 Installation
 To run this project locally, follow these steps:<br/>
