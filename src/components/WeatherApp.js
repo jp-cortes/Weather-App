@@ -4,12 +4,14 @@ import { WeatherMainInfo } from "./WeatherMainInfo";
 import styles from "../styles/WeatherApp.module.css";
 import { Loading } from "./Loading";
 
+//api url
+const APP_URL = process.env.REACT_APP_URL;
+
 function WeatherApp() {
   const [weather, setWeather] = useState(null);
-
   async function loadInfo(city = "paris,fr") {
     try {
-      const request = await fetch(`${process.env.REACT_APP_URL}/${city}`, {
+      const request = await fetch(`${APP_URL}/${city}`, {
         method: "GET",
         headers: {
           "X-RapidAPI-Key": process.env.REACT_APP_KEY,
